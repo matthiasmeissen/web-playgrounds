@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 
+@keyframes move {
+    0% {transform: translateX(-60vw);}
+    100% {transform: translateX(60vw);}
+}
+
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
@@ -37,6 +42,18 @@ div.menu a {
     font-size: 14px;
     color: #000000;
     text-decoration: none;
+}
+
+div.move {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    animation: move 8s linear infinite;
+}
+
+div.move p {
+    transform: translate(-50%, -50%);
 }
 
 div.item {
