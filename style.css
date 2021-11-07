@@ -1,0 +1,13 @@
+body {
+    margin: 0;
+}
+
+h1 {
+    margin: 16px;
+}
+
+a {
+    display: block;
+    margin: 20px;
+    color: #000000;
+}
