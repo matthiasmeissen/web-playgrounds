@@ -29,35 +29,59 @@ div.menu a {
     text-decoration: none;
 }
 
-div.cursor {
-    position: absolute;
-    pointer-events: none;
+div.bar {
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 48px 0 60px;
 }
 
-div.circle {
-    width: 20px;
-    height: 20px;
-    border-radius: 10px;
-    background-color: #ffffff;
-    transition: transform 0.2s;
+div.tag {
+    padding: 16px 42px;
+    border: 1px solid #000000;
+    border-radius: 20px;
+    cursor: pointer;
 }
 
-div.hover {
-    transform: scale(2);
+div.tagSelected {
+    color: #ffffff;
+    background-color: #000000;
 }
 
 div.content {
-    width: 100vw;
-    height: 100vh;
-    background-color: #beb2fa;
+    width: 80vw;
+    margin: 0 auto;
     display: flex;
     justify-content: center;
-    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-content: flex-start;
 }
 
-div.gradient {
-    width: 60vw;
-    height: 60vh;
-    background: linear-gradient(45deg, #e87d7d, #be89e4);
+div.item {
+    height: 200px;
+    flex: 0 0 20%;
     border-radius: 20px;
+    transition: box-shadow 0.2s;
+}
+
+div.item:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+div.hidden {
+    display: none;
+}
+
+.color1 {
+    background-color: #beb2fa;
+}
+
+.color2 {
+    background-color: #86dad2;
+}
+
+.color3 {
+    background-color: #afde50;
 }
