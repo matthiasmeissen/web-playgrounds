@@ -3,6 +3,15 @@
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
+    overflow: hidden;
+}
+
+h2 {
+    font-size: 32px;
+}
+
+p {
+    font-size: 16px;
 }
 
 div.menu {
@@ -17,6 +26,7 @@ div.menu {
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 10;
 }
 
 div.menu:hover {
@@ -27,4 +37,85 @@ div.menu a {
     font-size: 14px;
     color: #000000;
     text-decoration: none;
+}
+
+div.pagination {
+    position: absolute;
+    left: 48px;
+    bottom: 48px;
+    display: flex;
+    gap: 8px;
+}
+
+div.pagination div {
+    width: 12px;
+    height: 12px;
+    background-color: #c9c9c9;
+    border-radius: 8px;
+}
+
+div.pagination div.active {
+    background-color: #3e3e3e;
+}
+
+button {
+    position: absolute;
+    right: 42px;
+    bottom: 42px;
+    font-size: 16px;
+    padding: 12px 18px;
+    background-color: #c9c9c9;
+    border-radius: 8px;
+    border: none;
+    z-index: 10;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #3e3e3e;
+    color: #ffffff;
+}
+
+div.content {
+    width: 200vw;
+    height: 100vh;
+    display: flex;
+    transition: transform 0.2s;
+}
+
+section {
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+}
+
+div.image {
+    width: calc(min(40vw, 40vh));
+    height: calc(min(40vw, 40vh));
+    background-color: #c9c9c9;
+    border-radius: 20px;
+}
+
+div.text {
+    width: calc(min(40vw, 40vh));
+}
+
+
+
+@media (max-width: 480px) {
+    section {
+        flex-direction: column;
+    }
+
+    div.image {
+        width: 80vw;
+        height: 80vw;
+    }
+
+    div.text {
+        width: 80vw;
+    }
 }
