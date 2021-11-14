@@ -3,7 +3,10 @@
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
-    overflow: hidden;
+}
+
+h2 {
+    font-size: 60px;
 }
 
 div.menu {
@@ -29,4 +32,49 @@ div.menu a {
     font-size: 14px;
     color: #000000;
     text-decoration: none;
+}
+
+nav {
+    position: absolute;
+    top: 42px;
+    left: 50%;
+    border: 1px solid #000000;
+    border-radius: 40px;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    background-color: #ffffff;
+}
+
+div.item {
+    box-sizing: border-box;
+    width: 100px;
+    padding: 8px 12px;
+    text-align: center;
+    z-index: 10;
+    cursor: pointer;
+}
+
+div.item.selected {
+    color: #ffffff;
+}
+
+div.active {
+    position: absolute;
+    width: 100px;
+    height: 42px;
+    background-color: #000000;
+    border-radius: 40px;
+    transform: translateX(0);
+    transition: transform 0.2s;
+}
+
+div.content {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e837a1;
 }
