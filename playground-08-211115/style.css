@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+h2 {
+    font-size: 60px;
+}
+
+div.menu {
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+div.menu:hover {
+    background-color: #c9c9c9;
+}
+
+div.menu a {
+    font-size: 14px;
+    color: #000000;
+    text-decoration: none;
+}
+
+nav {
+    position: absolute;
+    top: 42px;
+    left: 50%;
+    border: 1px solid #000000;
+    border-radius: 40px;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    background-color: #ffffff;
+}
+
+div.item {
+    box-sizing: border-box;
+    width: 100px;
+    padding: 8px 12px;
+    text-align: center;
+    z-index: 10;
+    cursor: pointer;
+}
+
+div.item.selected {
+    color: #ffffff;
+}
+
+div.active {
+    position: absolute;
+    width: 100px;
+    height: 42px;
+    background-color: #000000;
+    border-radius: 40px;
+    transform: translateX(0);
+    transition: transform 0.2s;
+}
+
+div.content {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e837a1;
+}
