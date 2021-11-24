@@ -8,6 +8,7 @@ body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
     background-color: #e3e3e3;
+    overflow: hidden;
 }
 
 div.menu {
@@ -33,4 +34,77 @@ div.menu a {
     font-size: 14px;
     color: #000000;
     text-decoration: none;
+}
+
+div.top {
+    position: fixed;
+    width: 100vw;
+    background-color: #ffffff;
+    transition: height 0.2s;
+}
+
+div.top div.inner {
+    width: fit-content;
+    height: 80px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+div.top div.sub {
+    width: 80%;
+    height: 0;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    transition: height 0.4s;
+}
+
+div.top div.sub.open {
+    height: 200px;
+}
+
+div.sub a {
+    font-size: 20px;
+    margin: 0 0 12px 0;
+}
+
+div.top::before {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    bottom: -40px;
+    border-radius: 20px 0 0 0;
+    box-shadow: 0 -20px 0 0 #ffffff;
+}
+
+div.top::after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    bottom: -40px;
+    right: 0;
+    border-radius: 0 20px 0 0;
+    box-shadow: 0 -20px 0 0 #ffffff;
+}
+
+div.content {
+    width: 100%;
+    height: 100vh;
+    overflow: scroll;
+}
+
+section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
 }
