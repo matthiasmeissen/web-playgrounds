@@ -34,3 +34,50 @@ div.menu a {
     color: #000000;
     text-decoration: none;
 }
+
+nav {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    height: 42px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    transform: translateX(-50%);
+    overflow: hidden;
+    transition: height 0.4s;
+}
+
+nav.open {
+    height: 160px;
+}
+
+nav > a {
+    padding: 8px 12px;
+    border-radius: 8px;
+}
+
+nav > a:hover {
+    background-color: #c9c9c9;
+}
+
+nav div.sub {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    padding: 6px;
+    background-color: #ffffff;
+    border-radius: 8px;
+}
+
+nav div.sub a {
+    width: 120px;
+    padding: 4px 6px;
+    border-radius: 8px;
+}
+
+nav div.sub a:hover {
+    background-color: #e3e3e3;
+}
