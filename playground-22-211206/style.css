@@ -34,3 +34,43 @@ div.menu a {
     color: #000000;
     text-decoration: none;
 }
+
+nav {
+    position: fixed;
+    left: 20px;
+    top: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    transform: translateY(-50%);
+    background-color: #ffffff;
+    padding: 6px;
+    border-radius: 8px;
+}
+
+nav div.group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+nav a {
+    display: block;
+    width: 200px;
+    padding: 6px 8px;
+    background-color: #e3e3e3;
+    border-radius: 8px;
+}
+
+nav a:not(:first-child) {
+    padding: 6px 8px 6px 20px;
+    background-color: #ffffff;
+}
+
+nav a:hover {
+    background-color: #c9c9c9;
+}
+
+nav a.inner {
+    display: none;
+}
