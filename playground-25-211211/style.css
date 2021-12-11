@@ -10,6 +10,11 @@ body {
     background-color: #e3e3e3;
 }
 
+h1 {
+    margin: 0;
+    font-size: 60px;
+}
+
 div.menu {
     width: 48px;
     height: 48px;
@@ -33,4 +38,62 @@ div.menu a {
     font-size: 14px;
     color: #000000;
     text-decoration: none;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 32px;
+}
+
+div.logo {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+nav div.items {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+nav a {
+    width: 100%;
+    font-size: 18px;
+}
+
+nav a.active {
+    font-weight: 700;
+}
+
+nav a.active::before {
+    content: '⍑ ';
+}
+
+div.content {
+    position: relative;
+    height: calc(100vh - 40px);
+    margin: 20px 20px 20px 220px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    overflow: scroll;
+}
+
+section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+section div {
+    width: 80%;
+    max-width: 800px;
 }
