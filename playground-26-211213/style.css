@@ -10,6 +10,19 @@ body {
     background-color: #e3e3e3;
 }
 
+h1 {
+    font-size: 60px;
+}
+
+h2 {
+    font-size: 32px;
+}
+
+p {
+    font-size: 20px;
+    line-height: 1.4;
+}
+
 div.menu {
     width: 48px;
     height: 48px;
@@ -33,4 +46,62 @@ div.menu a {
     font-size: 14px;
     color: #000000;
     text-decoration: none;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    padding: 32px;
+    display: flex;
+    justify-content: space-between;
+    gap: 32px;
+    font-size: 32px;
+    font-weight: 300;
+    z-index: 1;
+}
+
+nav a:hover {
+    cursor: pointer;
+}
+
+nav a:first-child {
+    margin: 0 auto 0 0;
+}
+
+div.content {
+    position: absolute;
+    height: 100vh;
+    display: flex;
+    overflow-x: scroll;
+}
+
+.label {
+    display: inline;
+    padding: 6px 10px;
+    border: 1px solid #000000;
+    border-radius: 20px;
+    font-size: 16px;
+}
+
+section {
+    width: 80vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section div {
+    width: 800px;
+}
+
+
+@media (max-width: 800px) {
+    div.content {
+        flex-direction: column;
+    }
+
+    section {
+        width: 100vw;
+    }
 }
