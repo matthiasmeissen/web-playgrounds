@@ -1,23 +1,52 @@
 const navItems = document.querySelectorAll('nav a')
 const sections = document.querySelectorAll('div.content section')
 
+let currentItem = 0
+
+navItems[0].classList.add('active')
+sections[0].classList.add('active')
+
 navItems.forEach(navItem => {
-    navItem.addEventListener('click', function () {
-        navItems.forEach(item => {
-            item.classList.remove('active')
-        });
-        navItem.classList.add('active')
+    navItem.addEventListener('click', function (event) {
+
+        currentItem = parseInt(event.target.attributes[1].value)
+
+        removeActive()
+        setActive(currentItem)
     })
 });
 
-const setState = function () {
-    navItems[0].classList.add('active')
+window.addEventListener('keydown', function (event) {
+    if (event.key == 'ArrowDown') {
+        if (currentItem >= navItems.length - 1) {
+            currentItem = 0
+        } else {
+            currentItem += 1
+        }
+        removeActive()
+        setActive(currentItem)
+    } else if (event.key == 'ArrowUp') {
+        if (currentItem <= 0) {
+            currentItem = 4
+        } else {
+            currentItem -= 1
+        }
+        removeActive()
+        setActive(currentItem)
+    }
+})
 
-    sections.forEach(section => {
-        section.classList.add('hidden')
+const removeActive = function () {
+    navItems.forEach(navItem => {
+        navItem.classList.remove('active')
     });
 
-    sections[0].classList.remove('hidden')
+    sections.forEach(section => {
+        section.classList.remove('active')
+    });
 }
 
-setState()
+const setActive = function (number) {
+    navItems[number].classList.add('active')
+    sections[number].classList.add('active')
+}

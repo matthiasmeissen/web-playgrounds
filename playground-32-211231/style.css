@@ -63,7 +63,7 @@ nav a {
     font-size: 16vh;
     font-weight: 700;
     text-decoration: none;
-    color: rgba(0, 0, 0, 0);
+    color: rgba(255, 255, 255, 0);
     -webkit-text-stroke: 1px #000000;
 }
 
@@ -91,14 +91,27 @@ div.content {
     overflow-y: scroll;
 }
 
+span.label {
+    display: inline-block;
+    width: 100%;
+    font-weight: 700;
+}
+
+div.image {
+    width: 100%;
+    aspect-ratio: 8 / 5;
+    background-color: #c9c9c9;
+    border-radius: 20px;
+}
+
 section {
     min-height: 100%;
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: space-between;
     gap: 48px;
 }
 
-section.hidden {
-    display: none;
+section.active {
+    display: flex;
 }
