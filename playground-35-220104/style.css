@@ -47,12 +47,20 @@ nav {
     display: flex;
     gap: 8px;
     transform: translateX(-50%);
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+    z-index: 10;
 }
 
 nav a {
     background-color: #ffffff;
     padding: 16px;
+    border: 1px solid #ffffff;
     border-radius: 8px;
+    cursor: pointer;
+}
+
+nav a.active {
+    border: 1px solid #000000;
 }
 
 nav a:hover {
@@ -60,11 +68,17 @@ nav a:hover {
 }
 
 div.window {
-    width: 60vw;
+    display: none;
+    position: absolute;
+    width: 80vh;
     height: 60vh;
     background-color: #ffffff;
     border-radius: 20px;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+div.window.active {
+    display: block;
 }
 
 div.bar {
@@ -72,6 +86,7 @@ div.bar {
     height: 42px;
     background-color: #c9c9c9;
     border-radius: 20px 20px 0 0;
+    cursor: move;
 }
 
 div.inner {
