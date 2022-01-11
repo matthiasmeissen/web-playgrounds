@@ -2,7 +2,7 @@ const contentTag = document.querySelector('div.content')
 const editTag = document.querySelector('div.top a')
 
 editTag.addEventListener('click', function () {
-    removeDividers()
+    removeDivider()
 })
 
 const createItem = function (location, text) {
@@ -27,7 +27,7 @@ const createDivider = function () {
     return item
 }
 
-const removeDividers = function () {
+const removeDivider = function () {
     const dividers = document.querySelectorAll('div.insert')
 
     dividers.forEach(divider => {
