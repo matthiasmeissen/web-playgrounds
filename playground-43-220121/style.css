@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    color: #282525;
+    background-color: #e3e3e3;
+    overflow: hidden;
+}
+
+div.menu {
+    width: 48px;
+    height: 48px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+div.menu:hover {
+    background-color: #c9c9c9;
+}
+
+div.menu a {
+    font-size: 14px;
+    color: #000000;
+    text-decoration: none;
+}
+
+div.content {
+    width: 800px;
+    margin: 120px auto;
+}
+
+div.add {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+div.add a {
+    padding: 8px 16px;
+    background-color: #ffffff;
+    border-radius: 20px;
+}
+
+div.add a:hover {
+    background-color: #c9c9c9;
+    cursor: pointer;
+}
+
+div.overlay {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50vw;
+    height: 30vw;
+    background-color: #ffffff;
+    border-radius: 20px;
+    transform: translate(-50%, -50%);
+}
+
+div.overlay.active {
+    display: block;
+}
+
+div.options {
+    width: 100%;
+    padding: 18px;
+}
+
+select {
+    font-size: 16px;
+    padding: 4px 8px;
+}
+
+input {
+    width: fit-content;
+}
+
+div.input {
+    width: 100%;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+div.item-1 {
+    width: 100%;
+}
