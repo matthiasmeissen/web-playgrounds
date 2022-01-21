@@ -42,22 +42,17 @@ div.content {
     margin: 120px auto;
 }
 
-div.add {
+button.large {
     position: fixed;
     top: 20px;
     right: 20px;
-    display: flex;
-    align-items: center;
-    gap: 16px;
-}
-
-div.add a {
     padding: 8px 16px;
     background-color: #ffffff;
+    border: none;
     border-radius: 20px;
 }
 
-div.add a:hover {
+button:hover {
     background-color: #c9c9c9;
     cursor: pointer;
 }
@@ -71,6 +66,7 @@ div.overlay {
     height: 30vw;
     background-color: #ffffff;
     border-radius: 20px;
+    padding: 18px;
     transform: translate(-50%, -50%);
 }
 
@@ -78,28 +74,6 @@ div.overlay.active {
     display: block;
 }
 
-div.options {
-    width: 100%;
-    padding: 18px;
-}
-
-select {
-    font-size: 16px;
-    padding: 4px 8px;
-}
-
-input {
-    width: fit-content;
-}
-
-div.input {
-    width: 100%;
-    padding: 18px;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
-
-div.item-1 {
+div.item {
     width: 100%;
 }
