@@ -42,19 +42,32 @@ div.content {
     margin: 120px auto;
 }
 
-button.large {
-    position: fixed;
-    top: 20px;
-    right: 20px;
+button {
+    font-family: inherit;
+    font-size: inherit;
     padding: 8px 16px;
     background-color: #ffffff;
-    border: none;
+    border: 1px solid #000000;
     border-radius: 20px;
 }
 
 button:hover {
     background-color: #c9c9c9;
     cursor: pointer;
+}
+
+button.large {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+
+input {
+    font-family: inherit;
+    font-size: inherit;
+    padding: 8px 12px;
+    border: 1px solid #000000;
+    border-radius: 20px;
 }
 
 div.overlay {
@@ -72,6 +85,14 @@ div.overlay {
 
 div.overlay.active {
     display: block;
+}
+
+div.input {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    margin: 0 0 16px 0;
 }
 
 div.item {
