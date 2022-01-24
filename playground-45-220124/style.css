@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    color: #282525;
+    background-color: #e3e3e3;
+    overflow: hidden;
+}
+
+div.menu {
+    width: 48px;
+    height: 48px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+div.menu:hover {
+    background-color: #c9c9c9;
+}
+
+div.menu a {
+    font-size: 14px;
+    color: #000000;
+    text-decoration: none;
+}
+
+div.content {
+    width: 800px;
+    margin: 120px auto;
+}
+
+button {
+    font-family: inherit;
+    font-size: inherit;
+    padding: 8px 16px;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 20px;
+}
+
+button:hover {
+    background-color: #c9c9c9;
+    cursor: pointer;
+}
+
+button.large {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+
+input {
+    font-family: inherit;
+    font-size: inherit;
+    padding: 8px 12px;
+    border: 1px solid #000000;
+    border-radius: 20px;
+}
+
+div.overlay {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50vw;
+    height: 30vw;
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 18px;
+    transform: translate(-50%, -50%);
+}
+
+div.overlay.active {
+    display: block;
+}
+
+div.input {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    margin: 0 0 16px 0;
+}
+
+div.item {
+    width: 100%;
+}
