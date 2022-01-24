@@ -12,6 +12,16 @@ body {
     overflow: hidden;
 }
 
+h2 {
+    font-size: 20px;
+    margin: 0 0 16px 0;
+}
+
+p {
+    font-size: 16px;
+    margin: 0 0 12px 0;
+}
+
 div.menu {
     width: 48px;
     height: 48px;
@@ -60,6 +70,7 @@ button.large {
     position: fixed;
     top: 20px;
     right: 20px;
+    z-index: 10;
 }
 
 input {
@@ -71,20 +82,27 @@ input {
 }
 
 div.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
     display: none;
-    position: absolute;
-    top: 50%;
-    left: 50%;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+div.overlay.active {
+    display: flex;
+}
+
+div.overlay div.inner {
     width: 50vw;
     height: 30vw;
     background-color: #ffffff;
     border-radius: 20px;
     padding: 18px;
-    transform: translate(-50%, -50%);
-}
-
-div.overlay.active {
-    display: block;
 }
 
 div.input {
@@ -97,4 +115,12 @@ div.input {
 
 div.item {
     width: 100%;
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 16px 20px;
+    margin: 0 0 16px 0;
+}
+
+div.item :last-child {
+    margin: 0;
 }
