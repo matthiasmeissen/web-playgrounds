@@ -40,12 +40,13 @@ bodyTag.addEventListener('click', function (event) {
 const createItems = function () {
     items.forEach(item => {
         const newItem = document.createElement('div')
-        const newInput = document.createElement('input')
-        const newLabel = document.createElement('label')
-        newInput.setAttribute('type', 'checkbox')
-        newLabel.innerHTML = item
 
+        const newInput = document.createElement('input')
+        newInput.setAttribute('type', 'checkbox')
         newItem.appendChild(newInput)
+
+        const newLabel = document.createElement('label')
+        newLabel.innerHTML = item
         newItem.appendChild(newLabel)
 
         formTag.appendChild(newItem)
