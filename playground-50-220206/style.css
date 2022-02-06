@@ -11,6 +11,25 @@ body {
     background-color: #e3e3e3;
 }
 
+h1 {
+    margin: 0;
+    font-size: 48px;
+    font-weight: 300;
+}
+
+h2 {
+    margin: 0 0 4px 0;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+p {
+    margin: 0 0 12px 0;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.4;
+}
+
 div.menu {
     width: 48px;
     height: 48px;
@@ -37,53 +56,28 @@ div.menu a {
 }
 
 div.content {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-div.dropdown {
-    position: relative;
-}
-
-div.dropdown div.target {
-    width: 200px;
-    padding: 8px 12px;
-    background-color: #ffffff;
-    border: 1px solid #000000;
-    border-radius: 20px;
-}
-
-div.dropdown div.target:hover {
-    background-color: #c9c9c9;
-    cursor: pointer;
-}
-
-button {
-    font-family: inherit;
-    font-size: 16px;
-    padding: 4px 12px;
-    background-color: #ffffff;
-    border: 1px solid #000000;
-    border-radius: 20px;
-}
-
-div.dropdown div.inner {
-    position: absolute;
-    top: calc(100% + 16px);
-    left: 0;
     width: 100%;
-    background-color: #ffffff;
-    border: 1px solid #000000;
-    border-radius: 20px;
-    padding: 16px;
-    display: none;
+    display: flex;
     flex-direction: column;
-    gap: 12px;
+    align-items: center;
 }
 
-div.dropdown div.inner.open {
-    display: flex;
+section {
+    width: 800px;
+    padding: 0 0 60px 0;
+}
+
+section:first-child {
+    padding: 60px 0;
+}
+
+section.image {
+    width: 900px;
+}
+
+section.image div {
+    width: 100%;
+    aspect-ratio: 5 / 3;
+    background-color: #c9c9c9;
+    border-radius: 20px;
 }
