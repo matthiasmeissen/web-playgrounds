@@ -9,6 +9,7 @@ body {
     font-family: 'Roboto', sans-serif;
     color: #282525;
     background-color: #e3e3e3;
+    overflow: hidden;
 }
 
 div.menu {
@@ -44,6 +45,11 @@ div.content {
     align-items: center;
     justify-content: center;
     gap: 60px;
+}
+
+div.sliders {
+    display: flex;
+    gap: 20px;
 }
 
 div.number {
