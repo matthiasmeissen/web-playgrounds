@@ -186,3 +186,43 @@ div.article:hover {
     border-top: 2px solid #000000;
     cursor: pointer;
 }
+
+@media (max-width: 1200px) {
+    div.articles {
+        display: none;
+    }
+
+    div.teasers {
+        margin: 0 0 280px 0;
+        padding: 0 60px;
+        display: flex;
+        flex-direction: column;
+        gap: 120px;
+    }
+
+    div.teaser {
+        width: 100%;
+        position: relative;
+        height: 80vh;
+    }
+
+    div.image1 {
+        width: 80%;
+        height: 80vh;
+        left: 60px;
+        transform: translate(0, 0);
+    }
+
+    div.image2 {
+        width: 40%;
+        height: 60vh;
+        transform: translate(0, 0);
+    }
+
+    div.title {
+        width: 80%;
+        bottom: 60px;
+        right: 0;
+        transform: translate(0, 0);
+    }
+}
