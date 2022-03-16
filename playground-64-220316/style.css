@@ -211,12 +211,18 @@ div.article:hover {
         height: 80vh;
         left: 60px;
         transform: translate(0, 0);
+        transition: none;
     }
 
     div.image2 {
         width: 40%;
         height: 60vh;
         transform: translate(0, 0);
+        transition: none;
+    }
+
+    div.teaser:nth-child(even) div.image2 {
+        right: 0;
     }
 
     div.title {
@@ -224,5 +230,10 @@ div.article:hover {
         bottom: 60px;
         right: 0;
         transform: translate(0, 0);
+        transition: none;
+    }
+
+    div.teaser:nth-child(even) div.title {
+        left: 0;
     }
 }
