@@ -73,13 +73,14 @@ div.header div.inner {
     padding: 60px 48px;
     display: flex;
     flex-direction: column;
-    justify-content: end;
+    justify-content: flex-end;
+    gap: 24px;
 }
 
-div.inner > div {
+div.tags {
     display: flex;
+    flex-wrap: wrap;
     gap: 8px;
-    margin-bottom: 24px;
 }
 
 div.tag {
@@ -96,7 +97,7 @@ div.tag:hover {
 }
 
 div.cursor {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     pointer-events: none;
@@ -132,4 +133,29 @@ div.areas div:last-child {
 div.areas div:hover {
     color: #ffffff;
     background-color: #000000;
+}
+
+div.stories {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+    padding: 80px 60px;
+}
+
+div.story {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+div.story div.image {
+    width: 100%;
+    aspect-ratio: 1;
+    background-color: #282525;
+}
+
+div.story div.title {
+    font-size: 24px;
 }
