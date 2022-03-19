@@ -61,7 +61,7 @@ nav div.side {
 
 div.header {
     width: 100%;
-    height: calc(100vh - 200px);
+    height: calc(100vh - 210px);
     padding: 10px;
     border-bottom: 1px solid #000000;
 }
@@ -101,6 +101,7 @@ div.cursor {
     top: 0;
     left: 0;
     pointer-events: none;
+    z-index: 10;
 }
 
 div.cursor div {
@@ -139,23 +140,48 @@ div.stories {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 24px;
+    gap: 60px 24px;
     padding: 80px 60px;
 }
 
 div.story {
     width: 100%;
+    height: fit-content;
     display: flex;
     flex-direction: column;
     gap: 18px;
 }
 
+div.story.large {
+    grid-column: span 2;
+}
+
 div.story div.image {
     width: 100%;
     aspect-ratio: 1;
-    background-color: #282525;
+    background-color: #c9c9c9;
+    transition: transform 0.2s;
 }
 
 div.story div.title {
     font-size: 24px;
+}
+
+div.story:hover div.image {
+    transform: scale(1.02);
+}
+
+div.story:hover div.title {
+    text-decoration: underline;
+}
+
+
+@media (max-width: 1200px) {
+    div.stories {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    div.story.large {
+        grid-column: span 1;
+    }
 }
