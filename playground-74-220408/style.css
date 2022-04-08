@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    color: #282525;
+    background-color: #e3e3e3;
+}
+
+h1 {
+    font-size: 80px;
+    font-weight: 300;
+    line-height: 1.1;
+}
+
+div.menu {
+    width: 48px;
+    height: 48px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+div.menu:hover {
+    background-color: #c9c9c9;
+}
+
+div.menu a {
+    font-size: 14px;
+    color: #000000;
+    text-decoration: none;
+}
+
+nav {
+    position: relative;
+    width: 100%;
+    display: flex;
+    border-bottom: 1px solid #000000;
+}
+
+nav a {
+    font-size: 28px;
+    font-weight: 300;
+    width: 100%;
+    padding: 20px;
+    color: #000000;
+    transition: color 0.2s;
+}
+
+div.indicator {
+    content: '';
+    width: 33.3%;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #000000;
+    z-index: -1;
+    transition: height 0.2s 0.1s, transform 0.2s;
+}
+
+nav:hover {
+    cursor: pointer;
+}
+
+nav a:hover {
+    color: #ffffff;
+}
+
+nav:hover div.indicator {
+    height: 100%;
+}
+
+div.content {
+    width: 100%;
+}
+
+section {
+    width: 100%;
+    min-height: 40vh;
+    padding: 60px ;
+    display: flex;
+    align-items: center;
+}
