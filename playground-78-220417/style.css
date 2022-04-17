@@ -66,10 +66,6 @@ div.tag {
     overflow: hidden;
 }
 
-div.title {
-    font-size: 48px;
-    font-weight: 700;
-}
 
 div.tag::before {
     content: '';
@@ -96,4 +92,18 @@ div.tag:hover::before {
 
 div.tag.active::after {
     content: ' ×';
+}
+
+div.tag.hidden {
+    display: none;
+}
+
+div.title {
+    font-size: 48px;
+    font-weight: 700;
+}
+
+div.label {
+    font-size: 18px;
+    font-weight: 400;
 }
