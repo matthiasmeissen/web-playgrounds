@@ -36,74 +36,84 @@ div.menu a {
     text-decoration: none;
 }
 
-div.content {
-    width: 100%;
+nav {
+    width: 80%;
+    margin: 32px auto;
+    padding: 0 32px;
     display: flex;
-    gap: 32px;
-    padding: 60px;
+    align-items: center;
+    justify-content: space-between;
 }
 
-div.content > div {
+nav div.inner {
+    display: flex;
+    gap: 20px;
+}
+
+div.logo {
+    font-size: 28px;
+    font-weight: 600;
+}
+
+div.content {
+    width: 80%;
+    margin: 32px auto;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 32px;
+}
+
+.headline-l {
+    font-size: 60px;
+    font-weight: 800;
+    line-height: 1.1;
+}
+
+.headline-m {
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 1.1;
+}
+
+.label-l {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.body-l {
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+section {
     width: 100%;
+    min-height: 60vh;
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 32px;
     display: flex;
     flex-direction: column;
-    gap: 18px;
+    justify-content: space-between;
+    gap: 32px;
 }
 
-div.tags {
-    width: 100%;
+.stack {
     display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
+    flex-direction: column;
+    gap: 32px;
 }
 
-div.tag {
-    font-size: 16px;
-    padding: 4px 8px;
-    border: 1px solid #000000;
-    border-radius: 20px;
-    position: relative;
-    overflow: hidden;
+section.wide {
+    grid-column: span 2;
 }
 
-
-div.tag::before {
-    content: '';
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    background-color: #000000;
-    border-radius: 40px;
-    z-index: -1;
-    transform: translate(-50%, -50%) scale(0);
-    transition: transform 0.2s;
+.highlight {
+    background-image: linear-gradient(45deg, #2dbbfd, #ffbe6e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-div.tag:hover {
-    color: #ffffff;
-    cursor: pointer;
-}
-
-div.tag:hover::before {
-    transform: translate(-50%, -50%) scale(2);
-}
-
-div.tag.active::after {
-    content: ' ×';
-}
-
-div.tag.hidden {
-    display: none;
-}
-
-div.title {
-    font-size: 48px;
-    font-weight: 700;
-}
-
-div.label {
-    font-size: 18px;
-    font-weight: 400;
+section.intro {
+    background-image: linear-gradient(45deg, #5fccff, #ffd6a3);
 }
