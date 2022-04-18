@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    color: #282525;
+    background-color: #e3e3e3;
+}
+
+div.menu {
+    width: 48px;
+    height: 48px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+div.menu:hover {
+    background-color: #c9c9c9;
+}
+
+div.menu a {
+    font-size: 14px;
+    color: #000000;
+    text-decoration: none;
+}
+
+div.content {
+    width: 100%;
+    display: flex;
+    gap: 32px;
+    padding: 60px;
+}
+
+div.content > div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+div.tags {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+div.tag {
+    font-size: 16px;
+    padding: 4px 8px;
+    border: 1px solid #000000;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+
+div.tag::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: #000000;
+    border-radius: 40px;
+    z-index: -1;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.2s;
+}
+
+div.tag:hover {
+    color: #ffffff;
+    cursor: pointer;
+}
+
+div.tag:hover::before {
+    transform: translate(-50%, -50%) scale(2);
+}
+
+div.tag.active::after {
+    content: ' ×';
+}
+
+div.tag.hidden {
+    display: none;
+}
+
+div.title {
+    font-size: 48px;
+    font-weight: 700;
+}
+
+div.label {
+    font-size: 18px;
+    font-weight: 400;
+}
