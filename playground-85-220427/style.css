@@ -118,9 +118,9 @@ div.video div.last {
 }
 
 section.teaser div.inner {
-    width: 90vw;
     max-width: 1100px;
     margin: 0 auto;
+    padding: var(--spacing-m);
     display: flex;
     align-items: center;
     gap: 60px;
@@ -143,4 +143,20 @@ div.image {
     aspect-ratio: 4 / 5;
     background-color: #ffffff;
     border-radius: 48px;
+}
+
+section.news div.inner {
+    width: 1200px;
+    display: flex;
+    gap: var(--spacing-m);
+}
+
+section.news div.inner div {
+    width: 100%;
+    aspect-ratio: 1;
+    background-color: #ffffff;
+    border-radius: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
