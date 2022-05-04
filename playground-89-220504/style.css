@@ -5,9 +5,11 @@
 }
 
 :root {
-    --font-size-l: 60px;
-    --font-size-m: 48px;
-    --font-size-s: 20px;
+    --font-size-xl: 60px;
+    --font-size-l: 48px;
+    --font-size-m: 32px;
+    --font-size-s: 24px;
+    --font-size-xs: 18px;
 
     --spacing-l: 60px;
     --spacing-m: 32px;
@@ -17,8 +19,36 @@
 body {
     margin: 0;
     font-family: 'Inter', sans-serif;
+    text-size-adjust: none;
+    -webkit-text-size-adjust: none;
     color: #282525;
-    background-color: #ffffff;
+    background-color: #e3e3e3;
+}
+
+.display-m {
+    font-size: var(--font-size-xl);
+    font-weight: 600;
+}
+
+.headline-m {
+    font-size: var(--font-size-l);
+    font-weight: 600;
+}
+
+.title-m {
+    font-size: var(--font-size-m);
+    font-weight: 600;
+}
+
+.body-m {
+    font-size: var(--font-size-s);
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+.label-m {
+    font-size: var(--font-size-xs);
+    font-weight: 400;
 }
 
 div.menu {
@@ -44,4 +74,82 @@ div.menu a {
     font-size: 14px;
     color: #000000;
     text-decoration: none;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    font-size: var(--font-size-xs);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 var(--spacing-l);
+}
+
+nav div.inner {
+    display: flex;
+    gap: var(--spacing-s);
+    padding: 6px 18px;
+    background-color: #ffffff;
+    border-radius: 20px;
+}
+
+header {
+    width: 100%;
+    max-width: 1800px;
+    margin: 0 auto;
+    height: 80vh;
+    padding: var(--spacing-l);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+header div {
+    max-width: 1200px;
+}
+
+section {
+    width: 100%;
+    max-width: 1800px;
+    padding: var(--spacing-l);
+    margin: 0 auto 120px;
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: var(--spacing-m);
+}
+
+section > div:first-child {
+    position: sticky;
+    top: 120px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-m);
+    grid-column: span 2;
+}
+
+section > div:last-child {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-m);
+    grid-column: span 4;
+}
+
+div.image {
+    width: 100%;
+    aspect-ratio: 5 / 3;
+    background-color: #c9c9c9;
+    border-radius: 20px;
+}
+
+div.profile {
+    width: 100%;
+    padding: var(--spacing-m);
+    background-color: #c9c9c9;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-s);
 }
