@@ -88,6 +88,27 @@ nav .inner{
     justify-content: space-between;
 }
 
+nav .open {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 80vh;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-s);
+    border-radius: 100%;
+    background-color: #ffffff;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.2s;
+}
+
+nav .open.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+
 span.highlight {
     font-weight: 800;
 }
@@ -137,13 +158,6 @@ div.image {
 section {
     width: 100%;
     padding: var(--spacing-l) var(--spacing-s);
-}
-
-.info {
-    width: 100%;
-    padding: var(--spacing-s);
-    border: 1px solid #000000;
-    border-radius: 20px;
 }
 
 section .inner {
