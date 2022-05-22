@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --font-size-l: 42px;
+    --font-size-m: 28px;
+    --font-size-s: 20px;
+
+    --spacing-l: 120px;
+    --spacing-m: 80px;
+    --spacing-s: 32px;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    color: #282525;
+    background-color: #ffffff;
+}
+
+.display-m {
+    font-size: var(--font-size-l);
+    font-weight: 400;
+    line-height: 1.1;
+}
+
+.headline-l {
+    font-size: var(--font-size-m);
+    font-weight: 800;
+}
+
+.headline-m {
+    font-size: var(--font-size-m);
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+.body-m {
+    font-size: var(--font-size-s);
+    font-weight: 400;
+}
+
+div.menu {
+    width: 48px;
+    height: 48px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+div.menu:hover {
+    background-color: #c9c9c9;
+}
+
+div.menu a {
+    font-size: 14px;
+    color: #000000;
+    text-decoration: none;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    padding: 0 var(--spacing-s);
+}
+
+nav .logo {
+    font-size: var(--font-size-s);
+    font-weight: 800;
+}
+
+nav .inner{
+    max-width: 980px;
+    margin: 0 auto;
+    padding: var(--spacing-s) 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .open {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 80vh;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-s);
+    border-radius: 100%;
+    background-color: #ffffff;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.2s;
+}
+
+nav .open.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+span.highlight {
+    font-weight: 800;
+}
+
+header {
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    padding: var(--spacing-s);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-color: hsl(20deg, 90%, 80%);
+}
+
+header .inner {
+    width: 100%;
+    max-width: 980px;
+    padding-top: var(--spacing-s);
+    margin: 0 auto;
+    border-top: 1px solid #000000;
+}
+
+header .logo {
+    width: 100%;
+    height: 100%;
+    margin-top: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header .logo div {
+    width: max(20vw, 20vh);
+    height: max(20vw, 20vh);
+    border: 4px solid #000000;
+    border-radius: 100%;
+}
+
+div.image {
+    width: 100%;
+    aspect-ratio: 5 / 3;
+    background-color: #c9c9c9;
+    border-radius: 20px;
+}
+
+section {
+    width: 100%;
+    padding: var(--spacing-l) var(--spacing-s);
+}
+
+section .inner {
+    max-width: 980px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-m);
+}
+
+.tag {
+    width: fit-content;
+    padding: 4px 10px;
+    border: 1px solid #000000;
+    border-radius: 20px;
+}
+
+section.teasers {
+    padding: var(--spacing-l) 0;
+    overflow: hidden;
+}
+
+section.teasers > div {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing-s);
+    padding: var(--spacing-s);
+    overflow: scroll;
+}
+
+.teaser {
+    width: calc(100vw - var(--spacing-m));
+    max-width: 520px;
+    aspect-ratio: 3 / 4;
+    background-color: hsl(20deg, 90%, 80%);
+    border-radius: 20px;
+    padding: var(--spacing-s);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: var(--spacing-s);
+}
+
+.teaser div:last-child {
+    width: 100%;
+    padding-top: var(--spacing-s);
+    border-top: 1px solid #000000;
+}
+
+@media (max-width: 480px) {
+    :root {
+        --font-size-l: 32px;
+        --font-size-m: 20px;
+        --font-size-s: 16px;
+    
+        --spacing-l: 80px;
+        --spacing-m: 42px;
+        --spacing-s: 16px;
+    }
+}
