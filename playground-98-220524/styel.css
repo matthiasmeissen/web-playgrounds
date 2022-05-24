@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --font-size-l: 42px;
+    --font-size-m: 28px;
+    --font-size-s: 20px;
+
+    --spacing-l: 120px;
+    --spacing-m: 80px;
+    --spacing-s: 32px;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    color: #282525;
+    background-color: #ffffff;
+}
+
+.display-m {
+    font-size: var(--font-size-l);
+    font-weight: 600;
+    line-height: 1.1;
+}
+
+
+.headline-m {
+    font-size: var(--font-size-m);
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+.body-m {
+    font-size: var(--font-size-s);
+    font-weight: 400;
+}
+
+div.menu {
+    width: 48px;
+    height: 48px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+div.menu:hover {
+    background-color: #c9c9c9;
+}
+
+div.menu a {
+    font-size: 14px;
+    color: #000000;
+    text-decoration: none;
+}
+
+section {
+    width: 100vw;
+    height: 100vh;
+    padding: var(--spacing-s) var(--spacing-s) 0;
+    display: flex;
+    flex-direction: column;
+}
+
+div.inner {
+    width: 100%;
+    max-width: 580px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    gap: 18px;
+    border-radius: 20px;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+}
+
+div.indicator {
+    width: 100%;
+    max-width: 580px;
+    margin: 0 auto;
+    padding: var(--spacing-s);
+    display: flex;
+    gap: 12px;
+}
+
+div.indicator div {
+    width: 100%;
+    height: 6px;
+    border-radius: 20px;
+    background-color: #282525;
+    opacity: 0.2;
+}
+
+div.indicator div.active {
+    opacity: 1;
+}
+
+div.teaser {
+    width: 100%;
+    max-width: 580px;
+    height: 100%;
+    padding: var(--spacing-s);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #c9c9c9;
+    border-radius: 20px;
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+}
