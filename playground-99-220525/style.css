@@ -35,3 +35,85 @@ div.menu a {
     color: #000000;
     text-decoration: none;
 }
+
+div.content {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div.inner {
+    position: relative;
+}
+
+div.inner div.text {
+    position: relative;
+    font-size: 32px;
+    padding: 8px 16px;
+    border-radius: 20px;
+    background-color: hsl(0deg, 0%, 90%);
+}
+
+div.inner:hover div.text {
+    background-color: hsl(0deg, 0%, 100%);
+    cursor: pointer;
+}
+
+.layer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    background-color: hsl(0deg, 100%, 100%);
+    transform: translate(-50%, -50%) scale(0);
+    transition: all 0.2s;
+}
+
+div.inner:hover .layer.c1 {
+    background-color: hsl(0deg, 100%, 50%);
+    transform: translate(-50%, -50%) scale(1);
+}
+
+div.inner:hover .layer.c2 {
+    background-color: hsl(40deg, 100%, 50%);
+    transform: translate(-50%, -50%) scale(2);
+}
+
+div.inner:hover .layer.c3 {
+    background-color: hsl(80deg, 100%, 50%);
+    transform: translate(-50%, -50%) scale(3);
+}
+
+div.inner:hover .layer.c4 {
+    background-color: hsl(120deg, 100%, 50%);
+    transform: translate(-50%, -50%) scale(4);
+}
+
+div.inner:hover .layer.c5 {
+    background-color: hsl(160deg, 100%, 50%);
+    transform: translate(-50%, -50%) scale(5);
+}
+
+div.inner:hover .layer.c6 {
+    background-color: hsl(200deg, 100%, 50%);
+    transform: translate(-50%, -50%) scale(6);
+}
+
+div.inner:hover .layer.c7 {
+    background-color: hsl(240deg, 100%, 50%);
+    transform: translate(-50%, -50%) scale(7);
+}
+
+div.inner:hover .layer.c8 {
+    background-color: hsl(280deg, 100%, 50%);
+    transform: translate(-50%, -50%) scale(8);
+}
+
+div.inner:hover .layer.c9 {
+    background-color: hsl(320deg, 100%, 50%);
+    transform: translate(-50%, -50%) scale(9);
+}
